@@ -130,7 +130,7 @@ a {
   margin: 0 auto;
 }
 .container-footer-links div {
-  max-width:30%;
+  width:30%;
   margin: 1% 0 1% 2%;
 }
 .container-footer-links {
