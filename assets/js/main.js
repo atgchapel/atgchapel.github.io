@@ -17,4 +17,24 @@
     timer += 7000;
   }
 })();
-console.log(location.pathname)
+
+(function renderStatementOfFaith () {
+  if (document.querySelector(`.statement-of-faith a`)) {
+    let statementOfFaith = document.querySelector(`.statement-of-faith a`);
+    let checker = 0;
+    statementOfFaith.addEventListener(`click`, (event)=>{
+    event.preventDefault();
+    if (checker == 0) {
+      document.querySelector(`.statement-of-faith p`).style.display = `block`;
+    document.querySelector(`.fa-solid.fa-caret-down`).style.display = `none`;
+    document.querySelector(`.fa-solid.fa-caret-up`).style.display = `inline`;
+    checker = 1;
+    } else if (checker == 1) {
+      document.querySelector(`.statement-of-faith p`).style.display = `none`;
+    document.querySelector(`.fa-solid.fa-caret-down`).style.display = `inline`;
+    document.querySelector(`.fa-solid.fa-caret-up`).style.display = `none`;
+    checker = 0;
+    }
+  });
+  }
+})();

@@ -120,10 +120,21 @@ a {
   width: 100%;
   height: 100%;
 }
-.statement-of-faith p {
+#statement-of-faith {
+  display: none;
   text-align: justify;
   background-color: rgba(127.5, 127.5, 127.5, 0.1);
   padding: 1%;
+}
+.statement-of-faith h3 {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.fa-solid.fa-caret-up {
+  display: none;
+}
+.books-and-Magazines {
+  margin: 2% 0;
 }
 /*footer styles*/
 #site-footer {
@@ -139,9 +150,10 @@ a {
   max-width: 20%;
   margin: 0 auto;
 }
-.container-footer-links div {
+.container-footer-links div, .container-footer-links h3 {
   width:30%;
   margin: 1% 0 1% 2%;
+  text-align: left;
 }
 .container-footer-links {
   display: flex;
