@@ -9,7 +9,7 @@
   timer = 0;
   for (let i = 0; i < images.length; i++) {
     setTimeout (()=>{
-      bannerDiv.innerHTML = `<img src=${images[i]}/>`;
+      bannerDiv.innerHTML = `<img src=${images[i]}>`;
     }, timer);
     imageIndex++;
     timer += 7000;
