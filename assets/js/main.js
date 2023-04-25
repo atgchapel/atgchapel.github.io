@@ -8,9 +8,40 @@
   }
 })();
 
+(function displayDopdown () {
+  if (document.querySelectorAll(`.ministries, .about-atg`)) {
+    let dropdownsParents = document.querySelectorAll(`.ministries, .about-atg`);
+  let ministries = dropdownsParents[0];
+  let aboutAtg = dropdownsParents[1];
+  let ministryChecker = 0;
+  let aboutAtgChecker = 0;
+  ministries.addEventListener(`click`, ()=>{
+    if (ministryChecker == 0) {
+      aboutAtg.children[1].style.display = `none`;
+      ministries.children[1].style.display = `block`;
+      ministryChecker = 1;
+    } else if (ministryChecker == 1) {
+      ministries.children[1].style.display = `none`;
+      ministryChecker = 0;
+    }
+  });
+  aboutAtg.addEventListener(`click`, ()=>{
+    if (aboutAtgChecker == 0) {
+      ministries.children[1].style.display = `none`;
+      aboutAtg.children[1].style.display = `block`;
+      aboutAtgChecker = 1;
+    } else if (aboutAtgChecker == 1) {
+      aboutAtg.children[1].style.display = `none`;
+      aboutAtgChecker = 0;
+    }
+  });
+  }
+})();
+
 let slideIndex = 0;
 (function slideshow () {
-  let i;
+  if (document.getElementsByClassName("slideshow")) {
+    let i;
   let slides = document.getElementsByClassName("slideshow");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
@@ -19,6 +50,7 @@ let slideIndex = 0;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex - 1].style.display = 'block';
   setTimeout(slideshow, 5000);
+  }
 })();
 
 (function renderStatementOfFaith () {
