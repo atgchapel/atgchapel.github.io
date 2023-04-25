@@ -131,6 +131,9 @@ figcaption {
 .slideshow img {
   width: 100%;
 }
+.welcome {
+  margin: 3.5vh auto;
+}
 @keyframes fading {
   from {opacity: 0.4}
   to {opacity: 1}
@@ -176,6 +179,7 @@ figcaption {
 /*footer styles*/
 #site-footer {
   clear: both;
+  border-bottom: rgba(127.5, 127.5, 127.5, 0.3);
 }
 .footer-intro {
   background-color: black;
