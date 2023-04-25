@@ -44,6 +44,13 @@ a {
   text-decoration: none;
   color:white;
 }
+figure {
+  border: 1px solid var(--secondary-color);
+  box-shadow: 2px 2px 3px;
+}
+figcaption {
+  font-style: italic;
+}
 /*header styles*/
 .sticky-header {
   background-color: white;
@@ -88,7 +95,6 @@ a {
 #navigation ul li {
   padding: 1%;
   float: left;
-  color: white;
 }
 #navigation ul li a {
   color: white;
@@ -103,6 +109,9 @@ a {
 }
 .about-atg:hover .dropdown {
   display: block;
+}
+#navigation .active {
+  background-color: orange;
 }
 
 /*content styles*/
@@ -137,14 +146,31 @@ a {
   padding: 1%;
 }
 .statement-of-faith h3 {
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid rgba(127.5, 127.5, 127.5, 0.3);
+  border-bottom: 1px solid rgba(127.5, 127.5, 127.5, 0.3);
 }
 .fa-solid.fa-caret-up {
   display: none;
 }
 .books-and-Magazines {
   margin: 2% 0;
+}
+.videos {
+  margin: 2% auto;
+}
+.videos h3 {
+  background-color: orange;
+  text-align: center;
+  border-top: 1px solid rgba(127.5, 127.5, 127.5, 0.1);
+  border-bottom: 1px solid rgba(127.5, 127.5, 127.5, 0.1);
+}
+.videos figure {
+  width: 30%;
+  display: inline-block;
+  margin-left: 2%;
+}
+.videos figure video {
+  width: 100%;
 }
 /*footer styles*/
 #site-footer {
@@ -168,6 +194,9 @@ a {
 .container-footer-links {
   display: flex;
   flex-flow: row wrap;
+}
+.container-footer-links i {
+  margin-right: 5px;
 }
 .footer {
   text-align: center;

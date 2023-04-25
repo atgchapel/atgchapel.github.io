@@ -1,3 +1,13 @@
+(function currentPage () {
+  let links = document.querySelectorAll(`#navigation > ul > li`);
+  for (let x of links) {
+    x.addEventListener(`click`, ()=>{
+      let active = document.querySelector(`.active`).className = "";
+      x.className = "active";
+    });
+  }
+})();
+
 let slideIndex = 0;
 (function slideshow () {
   let i;
