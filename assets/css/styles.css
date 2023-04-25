@@ -114,13 +114,23 @@ a {
   margin: 1% auto;
 }
 .welcome-banner {
+  position: relative;
+}
+.slideshow {
+  display: none;
+}
+.slideshow img {
   width: 100%;
 }
-.welcome-banner img {
-  width: 100%;
-  height: 100%;
+@keyframes fading {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+.fading {
+  animation: fading 1.5s;
 }
 #statement-of-faith {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: none;
   text-align: justify;
   background-color: rgba(127.5, 127.5, 127.5, 0.1);
