@@ -146,6 +146,7 @@ figcaption {
   padding: 1%;
 }
 .statement-of-faith h3 {
+  margin-bottom: 5vh;
   border-top: 1px solid rgba(127.5, 127.5, 127.5, 0.3);
   border-bottom: 1px solid rgba(127.5, 127.5, 127.5, 0.3);
 }
