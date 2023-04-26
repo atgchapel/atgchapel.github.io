@@ -156,14 +156,20 @@ figcaption {
 .fa-solid.fa-caret-up {
   display: none;
 }
-.books-and-Magazines {
-  margin: 2% 0;
+.books-and-magazines {
+  height: 20vh;
+  margin: 3vh 0;
+  background-image: url("/assets/images/ho.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
 }
 .videos {
   margin: 3.5vh auto;
 }
 .videos h3 {
-  background-color: orange;
   text-align: center;
   border-top: 1px solid rgba(127.5, 127.5, 127.5, 0.1);
   border-bottom: 1px solid rgba(127.5, 127.5, 127.5, 0.1);
