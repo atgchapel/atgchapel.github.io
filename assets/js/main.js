@@ -3,7 +3,8 @@
   for (let x of links) {
     x.addEventListener(`click`, ()=>{
       let active = document.querySelector(`.active`).className = "";
-      x.className = "active";
+        x.className = "active";
+      x = 0;
     });
   }
 })();
@@ -40,7 +41,7 @@
 
 let slideIndex = 0;
 (function slideshow () {
-  if (document.getElementsByClassName("slideshow")) {
+  if (document.getElementsByClassName("slideshow").length > 0) {
     let i;
   let slides = document.getElementsByClassName("slideshow");
   for (i = 0; i < slides.length; i++) {
@@ -73,3 +74,67 @@ let slideIndex = 0;
   });
   }
 })();
+
+function figure (imgSrc, figcaption) {
+  return `<figure>
+  <img src = "${imgSrc}">
+  <figcaption>"${figcaption}"</figcaption>
+  </figure>`;
+}
+function renderPastoralTeam (callback) {
+  if (document.querySelectorAll(`.pastoral-team`).length > 0) {
+    let pastoralTeam = document.querySelector(`.pastoral-team`);
+  pastoralTeam.innerHTML = [callback("/assets/images/pastoral-team/1.png","Apostle Francis Musili"),
+  callback("/assets/images/pastoral-team/02.png","Rev Cecilia Musili"),
+  callback("/assets/images/pastoral-team/03.jpg","Rev Alexander Kilonzo(Resident Pst)"),
+  callback("/assets/images/pastoral-team/04.jpg","Rev Victor Kitema (Administrative Pst)"),
+  callback("/assets/images/pastoral-team/05.jpg","Pst Sarah Mutinda"),
+  callback("/assets/images/pastoral-team/06.jpg","Pst John Ngari"),
+  callback("/assets/images/pastoral-team/07.jpg","Pst Erick Maosa(Youth Pastor)"),
+  callback("/assets/images/pastoral-team/08.jpg","Regina Ochieng-Deaconess"),
+  callback("/assets/images/pastoral-team/09.jpg","Agnes Nyagena-Deaconess"),
+  callback("/assets/images/pastoral-team/10.jpg","Pst May Mchana"),
+  callback("/assets/images/pastoral-team/11.jpg","Pst Jane Maosa"),
+  callback("/assets/images/pastoral-team/12.jpg","Pst Winfred Nzioka"),
+  callback("/assets/images/pastoral-team/13.jpg","Pst Doreen Murungi"),
+  callback("/assets/images/pastoral-team/14.jpg","Pst Rosemary Nyambura"),
+  callback("/assets/images/pastoral-team/15.jpg","Pst Petronillah Kasyoki"),
+  callback("/assets/images/pastoral-team/16.jpg","Pst Rebecca Dancan"),
+  callback("/assets/images/pastoral-team/17.jpg","Pst Pauline Victor"),
+  callback("/assets/images/pastoral-team/18.jpg","Pst Dancan Kisinga"),
+  callback("/assets/images/pastoral-team/19.jpg","Pst Kamweru"),
+  callback("/assets/images/pastoral-team/20.jpg","Julius Kyemba- deacon"),
+  callback("/assets/images/pastoral-team/22.jpg","Pst Juliana Moraa"),
+  callback("/assets/images/pastoral-team/23.jpg","Elder ALlbert Omoke"),
+  callback("/assets/images/pastoral-team/24.jpg","Pst Bernard Mwendwa"),
+  callback("/assets/images/pastoral-team/25.jpg","Julian Ndeke-deaconess"),
+  callback("/assets/images/pastoral-team/26.jpg","Antony Kilile-Elder"),
+  callback("/assets/images/pastoral-team/27.jpg","Mary Katindi - Elder"),
+  callback("/assets/images/pastoral-team/28.jpg","Ndambuki - deacon"),
+  callback("/assets/images/pastoral-team/29.jpg","Mercy Nyaguthii-Deaconess"),
+  callback("/assets/images/pastoral-team/30.jpg","Ben Ochieng-Deacon"),
+  callback("/assets/images/pastoral-team/31.jpg","Diana Ngonyo-Deaconess"),
+  callback("/assets/images/pastoral-team/32.jpg","Hope Mchana Deaconess"),
+  callback("/assets/images/pastoral-team/33.jpg","James Mbiti-Deacon"),
+  callback("/assets/images/pastoral-team/34.jpg","Juliana Nzau-Deaconess"),
+  callback("/assets/images/pastoral-team/35.jpg","Magret -deaconess")].join("");
+
+  let apostleImages = document.querySelectorAll(`.pastoral-team figure`);
+  apostleImages[0].className = `apostle`;
+  apostleImages[1].className = `apostle`;
+  }
+}
+renderPastoralTeam(figure);
+
+function crusadeImages (callback) {
+  if(document.querySelectorAll(`.crusade-image-gallery`).length > 0) {
+    let imageDiv = document.querySelector(`.crusade-image-gallery`);
+  imageDiv.innerHTML = [callback("/assets/images/ministries/crusades/c1.jpg",""),
+  callback("/assets/images/ministries/crusades/c2.jpg", ""),
+  callback("/assets/images/ministries/crusades/c3.jpg", ""),
+  callback("/assets/images/ministries/crusades/c4.jpg", ""),
+  callback("/assets/images/ministries/crusades/c5.jpg", ""),
+  callback("/assets/images/ministries/crusades/c6.jpg", ""),].join('');;
+  }
+}
+crusadeImages(figure);
