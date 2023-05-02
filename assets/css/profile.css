@@ -114,18 +114,16 @@ figcaption {
   background-color: orange;
 }
 /*content styles*/
-.content {
-  background-color: rgb (0 0 0 / 10%);
-}
-.explain {
+.profile {
   width: 90%;
   margin: 3vh auto;
 }
-.content h3 {
-  text-align: center;
+.profile figure{
+  width: 50%;
   margin: 3vh auto;
 }
-.content p {
+.profile p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: justify;
 }
 

@@ -114,6 +114,22 @@ figcaption {
   background-color: orange;
 }
 /*content styles*/
+.content {
+  background-color: rgb(0 0 0 / 10%);
+}
+.explain {
+  width: 90%;
+  margin: 3vh auto;
+}
+.explain div {
+  margin: 3vh auto;
+}
+.video-gallery{
+  margin: 4vh auto;
+}
+.video-gallery h3 {
+  text-align: center;
+}
 
 /*footer styles*/
 #site-footer {

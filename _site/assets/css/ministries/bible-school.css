@@ -114,6 +114,18 @@ figcaption {
   background-color: orange;
 }
 /*content styles*/
+.content {
+  background-color: rgb(0 0 0 / 1%);
+}
+.content div {
+  height: 50vh;
+  position: relative;
+}
+.content div h3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
 
 /*footer styles*/
 #site-footer {
